@@ -1,0 +1,8 @@
+aside {
+  background-color : purple;
+}
+
+nav ul li{
+  display:flex;
+  flex-direction: column;
+}
