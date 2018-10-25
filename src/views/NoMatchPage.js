@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function NoMatchPage() {
+export default function NoMatch() {
   return (
     <div>
-      <p>No encontrado</p>
+      <p>PÁGINA NO ENCONTRADA. ERROR 404.</p>
     </div>
   )
 }

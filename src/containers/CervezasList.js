@@ -1,29 +1,30 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import CervezaSnippet from '../components/Cervezas'
+import CervezaSnippet from '../components/Cervezas/CervezasSnippet'
 
-/* export default class CervezasList extends Component {
-  render() {
-    return <p>Aquí estaría la lista de cervezas</p>
-  }
-} */
-
-const CervezasList = props => {
-  const { cervezas } = this.props
+const CervezasList = ({ cervezas }) => {
+  // const { cervezas, bares } = props
   return (
     <div>
       {cervezas.map(cerveza => (
-        <CervezaSnippet nombre={cerveza.nombre} desc={cerveza.desc} />
+        <CervezaSnippet
+          key={cerveza.nombre}
+          nombre={cerveza.nombre}
+          desc={cerveza.descripción}
+          envase={cerveza.envase}
+        />
       ))}
     </div>
   )
 }
 
-CervezasList.PropTypes = {
+CervezasList.propTypes = {
   cervezas: PropTypes.arrayOf(
     PropTypes.shape({
       nombre: PropTypes.string.required,
       desc: PropTypes.string
     })
-  ).required
+  ).isRequired
 }
+
+export default CervezasList

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import './Sidebar.css'
 
 export class Sidebar extends Component {
@@ -9,9 +8,11 @@ export class Sidebar extends Component {
         <nav>
           <ul>
             <li>
-              <Link to="/">Inicio</Link>
-              <Link to="/cervezas">Buscar cervezas</Link>
-              <Link to="/contact">Contactar</Link>
+              <a href="index">Inicio</a>
+              <a href="cervezas">Cervezas</a>
+              <a href="cervezas/listado">Listado de cervezas</a>
+              <a href="cervezas/buscador">Buscador</a>
+              <a href="contactar">Contactar</a>
             </li>
           </ul>
         </nav>
